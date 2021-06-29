@@ -1,4 +1,6 @@
 var getWeatherBtn = $('.weatherBtn');
+var submitBtn = $('.submit');
+console.log(submitBtn.val());
 var APIKey = "acf5cae1c94cfb7dfd80656854710bd9";
 
 function getWeatherAPI(city){
@@ -32,7 +34,7 @@ function getWeatherAPI(city){
         $('#wEmoji').attr('src',emojiUrl);
 
         $("#main-city" ).text(weatherObject.City);
-        $("#main-temp").text("Temperature: " + weatherObject.Temp);
+        $("#main-temp").text("Temperature: " + weatherObject.Temp  + "°");
         $("#main-wind").text("Humidity: " + weatherObject.Humidity + "%");;
         $("#main-humid").text("Wind Speed: " + weatherObject.Wind + "mph");;
 
@@ -64,13 +66,24 @@ function getWeatherAPI(city){
     .then (function (f){
         var forecast = f.daily;
         console.log(forecast);
-        for(var i=0; i < forecast.length;i++)
+        for(var i=0; i < 5;i++)
         {   
             weatherCard = $(".w-card-"+(i+1));
-            weatherCard.
+            weatherCard.children(".Temp").text("Temperature: " + Math.trunc(forecast[i].temp.day) + "°");
+            weatherCard.children(".Wind").text("Wind Speed: " + forecast[i].wind_speed + " mph");
+            weatherCard.children(".Humidity").text("Humidity: " + forecast[i].humidity + "%");
+
+            var emojiCode= forecast[i].weather[0].icon;
+            var emojiUrl = "https://openweathermap.org/img/w/"+ emojiCode + ".png";
+            
+            weatherCard.children().children().attr('src',emojiUrl);
+    
         }
     });
 }
+
+
+
 getWeatherBtn.click(function(){
     getWeatherAPI($(this).text()); //Passes the name of the button (City Name)
 });

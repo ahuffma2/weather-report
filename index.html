@@ -8,80 +8,86 @@
   </head>
   <body>
 
-    
+  
     <div>
-        <h1 class = 'text-center bg-primary ' id="header">Weather Dashboard</h1>
+        <h1 class = 'text-center bg-primary p-3' id="header">Weather Dashboard</h1>
     </div>
-
-
-    <div class = 'grid'>
-        <div style ="width: 18rem;">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    
+    <div class = "d-flex justify-content-center m-5">
+    <div class="input-group" style = "width: 18em;">
+        <input type="search" class="form-control rounded search" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary submit">search</button>
         
-            <hr>
+    </div>
+    </div>
+    <div class = "border p-3">
 
-            <button type="button" class="btn btn-secondary weatherBtn" style="width: 18rem;">Austin</button> 
-            <button type="button" class="btn btn-secondary weatherBtn"  style="width: 18rem;">Chicago</button>
-            <button type="button" class="btn btn-secondary weatherBtn"  style="width: 18rem;">New York</button>
+    <div class = 'd-flex justify-content-center'>
+
+            <button type="button" class="btn btn-secondary weatherBtn" style="width: 18rem;">Tokyo</button> 
+            <button type="button" class="btn btn-secondary weatherBtn"  style="width: 18rem;">Halifax</button>
+            <button type="button" class="btn btn-secondary weatherBtn"  style="width: 18rem;">Boston</button>
             <button type="button" class="btn btn-secondary weatherBtn"  style="width: 18rem;">Atlanta</button>
       
         </div>
     </div>
 
     <!-- Main Div For live weather -->
-    <div>
-        <h2 id="main-city">City Name</h2>
-        <div id="emoji"><img id="wEmoji" src =""></div>
-        <p id="main-temp">Temp</p>
-        <p id="main-wind">Wind</p>
-        <p id="main-humid" >Humidity</p>
-        <p id="main-uv">UV Index</p>
+    <div class = "d-flex justify-content-center m-5 p-3 border bg-">
+        <h2 class= "m-5 p-3" id="main-city">City Name</h2>
+        <div  class= "m-5 p-3"id="emoji"><img id="wEmoji" src =""></div>
+        <p   class= "m-5 p-3" id="main-temp">Temp</p>
+        <p  class= "m-5 p-3" id="main-wind">Wind</p>
+        <p   class= "m-5 p-3" id="main-humid" >Humidity</p>
+        <p   class= "m-5 p-3"id="main-uv">UV Index</p>
 
     </div>
 
-    <div class = "border">
-        <h3>5 day forecast</h3>
+    <h3 class="text-center">5 day forecast</h3>
+    <div class = "border d-flex justify-content-center">
+       
 
         <hr>
-        <div class = "w-card-1">
+        <div class = "w-card-1 card m-5 p-3">
             <h3 class= "Date">Date</h3>
-            <div class="emoji"><img id="wEmoji" src =""></div>
+            <div class="emoji"><img id="fEmoji" src =""></div>
             <p class= "Temp">Temp</p>
             <p class= "Wind">Wind</p>
             <p class= "Humidity">Humidity</p>
         </div>
 
         <hr>
-        <div class = "w-card-2">
+        <div class = "w-card-2 card m-5 p-3">
             <h3 class= "Date">Date</h3>
-            <div class="emoji"><img id="wEmoji" src =""></div>
+            <div class="emoji"><img id="fEmoji" src =""></div>
             <p class= "Temp">Temp</p>
             <p class= "Wind">Wind</p>
             <p class= "Humidity">Humidity</p>
         </div>
         
         <hr>
-        <div class = "w-card-3">
+        <div class = "w-card-3 card m-5 p-3">
             <h3 class= "Date">Date</h3>
-            <div class="emoji"><img id="wEmoji" src =""></div>
+            <div class="emoji"><img id="fEmoji" src =""></div>
             <p class= "Temp">Temp</p>
             <p class= "Wind">Wind</p>
             <p class= "Humidity">Humidity</p>
         </div>
         
         <hr>
-        <div class = "w-card-4">
+        <div class = "w-card-4 card m-5 p-3">
             <h3 class= "Date">Date</h3>
-            <div class="emoji"><img id="wEmoji" src =""></div>
+            <div class="emoji"><img id="fEmoji" src =""></div>
             <p class= "Temp">Temp</p>
             <p class= "Wind">Wind</p>
             <p class= "Humidity">Humidity</p>
         </div>
 
         <hr>
-        <div class = "w-card-5">
+        <div class = "w-card-5 card m-5 p-3">
             <h3 class= "Date">Date</h3>
-            <div class="emoji"><img id="wEmoji" src =""></div>
+            <div class="emoji"><img id="fEmoji" src =""></div>
             <p class= "Temp">Temp</p>
             <p class= "Wind">Wind</p>
             <p class= "Humidity">Humidity</p>
@@ -90,37 +96,7 @@
         
     </div>
 
-    <!-- <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div> --> 
+    <div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
