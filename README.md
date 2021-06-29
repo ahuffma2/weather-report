@@ -85,11 +85,11 @@ The last segment is very similar to the previous jQuery assignment, except I am 
         weatherCard.children(".Date").text(date);
 ```
 ## Technologies Used
-*HTML
-*Javascript
-*Bootstrap
-*JQuery
-*OpenWeatherMap API
+* HTML
+* Javascript
+* Bootstrap
+* JQuery
+* OpenWeatherMap API
 
 ## Author
 [Austin Huffman](https://www.linkedin.com/in/ahuffma2/)
