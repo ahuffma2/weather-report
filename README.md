@@ -3,3 +3,6 @@ This project uses API calls from OpenWeatherMap and OneCallAPI to fetch weather 
 
 ## Code Overview
 ![Site Overview](https://github.com/ahuffma2/weather-report/blob/main/assets/img/WeatherReport.JPG)
+
+##Author
+[Austin Huffman](linkedin.com/in/ahuffman2)
