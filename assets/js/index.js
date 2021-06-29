@@ -1,3 +1,8 @@
+//TODO 
+//UNIX Conversion for Date
+//404 responses
+
+
 var getWeatherBtn = $('.weatherBtn');
 var submitBtn = $('.submit');
 
@@ -42,7 +47,7 @@ function getWeatherAPI(city){
 
     .then(function(response){
         if(response.status !== 200){ 
-            //NEED TO DISPLAY RESPONSE IF FAILS
+            
             console.log(response.status);
         }
         return response.json();      
@@ -61,17 +66,26 @@ function getWeatherAPI(city){
         return response.json();      
     })
 
-    //Third call to get 5 Day forcast using onecall rather than the standard q? query 
+    //Third call to get 5 Day forecast using onecall rather than the standard q? query 
     .then (function (f){
 
         var forecast = f.daily; //Helps with readibility
 
         for(var i=0; i < 5;i++) //loops through all 5 days, both buttons and api days
         {   
+
+          
+
             weatherCard = $(".w-card-"+(i+1)); //Appending a number to act as a recognizable id in the loop 
             weatherCard.children(".Temp").text("Temperature: " + Math.trunc(forecast[i].temp.day) + "°"); //Truncate is used to get rid of the decimals
             weatherCard.children(".Wind").text("Wind Speed: " + forecast[i].wind_speed + " mph");
             weatherCard.children(".Humidity").text("Humidity: " + forecast[i].humidity + "%");
+
+            var date = moment(forecast[i].dt*1000).format('MM/DD/YYYY');
+            weatherCard.children(".Date").text(date);
+            
+            //Multiplying by 1000 to convert unix to moment.js format
+           
 
             //Same as Above for converting the icon to a usable image
             var emojiCode= forecast[i].weather[0].icon;
