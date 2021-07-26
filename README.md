@@ -13,11 +13,9 @@ This is a reoccuring code segment that appears with minor tweaks but the idea be
   //checks to see if the call is valid first
   fetch(location)
     .then(function (response) {
-      console.log(response.status);
       if (response.status !== 200) {
         //display status to user
         alert(response);
-        console.log(response.status);
       }
       return response.json();
     })
